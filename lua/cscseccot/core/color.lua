@@ -7,4 +7,4 @@ function TransparentDeezNuts()
 	vim.cmd([[hi LineNR guibg=NONE]])
 end
 
-vim.cmd("autocmd Colorscheme * lua TransparentDeezNuts()")
+-- vim.cmd("autocmd Colorscheme * lua TransparentDeezNuts()")

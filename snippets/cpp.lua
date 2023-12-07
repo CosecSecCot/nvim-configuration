@@ -141,6 +141,36 @@ local boilerplate = s(
 	)
 )
 table.insert(snippets, boilerplate)
+
+local leetcode = s(
+	"leetcode",
+	fmt(
+		[[
+    #include <bits/stdc++.h>
+    using namespace std;
+
+    class Solution {{
+    public:
+        {}
+    }};
+
+    int main()
+    {{
+        ios_base::sync_with_stdio(false);
+        cin.tie(nullptr);
+        cout.tie(nullptr);
+
+        Solution solution;
+
+        return 0;
+    }}
+    ]],
+		{
+			i(0, ""),
+		}
+	)
+)
+table.insert(snippets, leetcode)
 -- End Refactoring --
 
 return snippets, autosnippets

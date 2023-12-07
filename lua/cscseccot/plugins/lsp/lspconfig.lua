@@ -55,15 +55,8 @@ return {
 			keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
 
 			-- opts.desc = "Show Signature Help"
-			-- vim.keymap.set("i", "<C-S-H>", vim.lsp.buf.signature_help(), opts)
+			-- vim.keymap.set({ "n", "v", "i" }, "<C-l>", vim.lsp.buf.signature_help(), opts)
 		end
-
-		-- lspconfig.handlers["textDocument/hover"] = lspconfig.with(vim.lspconfig.handlers.hover, {
-		-- 	border = "rounded",
-		-- })
-		-- require("lspconfig.ui.windows").default_options = {
-		-- 	border = "rounded",
-		-- }
 
 		-- Border for :LspInfo
 		require("lspconfig.ui.windows").default_options.border = "rounded"
@@ -143,6 +136,11 @@ return {
 		})
 
 		lspconfig["cmake"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
+
+		lspconfig["taplo"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})

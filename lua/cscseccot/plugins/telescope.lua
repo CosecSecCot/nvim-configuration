@@ -32,6 +32,5 @@ return {
 			"<leader>ps",
 			"<cmd>Telescope current_buffer_fuzzy_find fuzzy=false case_mode=ignore_case<CR>"
 		)
-		-- vim.keymap.set('n', '<leader>pf', '<cmd>Telescope find_files<CR>')
 	end,
 }

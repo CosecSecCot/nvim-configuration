@@ -45,7 +45,7 @@ return {
 		"rebelot/kanagawa.nvim",
 		config = function()
 			require("kanagawa").setup({
-				transparent = true,
+				-- transparent = true,
 				terminal_colors = true,
 			})
 		end,
@@ -77,6 +77,9 @@ return {
 				},
 			})
 		end,
+	},
+	{
+		"hachy/eva01.vim",
 	},
 	{
 		"catppuccin/nvim",
@@ -136,7 +139,7 @@ return {
 	{
 		"LazyVim/LazyVim",
 		opts = {
-			colorscheme = "kanagawa-dragon",
+			colorscheme = "mellifluous",
 		},
 	},
 }
