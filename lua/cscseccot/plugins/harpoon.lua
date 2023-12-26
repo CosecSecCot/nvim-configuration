@@ -11,11 +11,17 @@ return {
 		vim.keymap.set("n", "<leader>h", ui.toggle_quick_menu)
 		-- vim.keymap.set("n", "<leader>h", ":Telescope harpoon marks<CR>")
 
-		vim.keymap.set("n", "<C-1>", function()
+		vim.keymap.set("n", "<leader>1", function()
 			ui.nav_file(1)
 		end)
-		vim.keymap.set("n", "<C-2>", function()
+		vim.keymap.set("n", "<leader>2", function()
 			ui.nav_file(2)
+		end)
+		vim.keymap.set("n", "<leader>3", function()
+			ui.nav_file(3)
+		end)
+		vim.keymap.set("n", "<leader>4", function()
+			ui.nav_file(4)
 		end)
 	end,
 }

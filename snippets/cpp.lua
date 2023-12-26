@@ -74,7 +74,7 @@ local cc = s(
 	"cc",
 	fmt(
 		[[
-    #include <bits/stdc++.h>
+    #include <iostream>
     using namespace std;
     #define ll long long
 
@@ -89,8 +89,8 @@ local cc = s(
         cin.tie(nullptr);
         cout.tie(nullptr);
     #ifndef ONLINE_JUDGE 
-        freopen("input.txt", "r", stdin); 
-        freopen("output.txt", "w", stdout); 
+        freopen("input", "r", stdin); 
+        freopen("output", "w", stdout); 
     #endif 
 
 
@@ -116,7 +116,7 @@ local boilerplate = s(
 	"boilerplate",
 	fmt(
 		[[
-    #include <bits/stdc++.h>
+    #include <iostream>
     using namespace std;
     #define ll long long
 
@@ -128,8 +128,7 @@ local boilerplate = s(
         cin.tie(nullptr);
         cout.tie(nullptr);
     #ifndef ONLINE_JUDGE 
-        freopen("input.txt", "r", stdin); 
-        freopen("output.txt", "w", stdout); 
+        freopen("input", "r", stdin); 
     #endif 
 
         return 0;
@@ -146,7 +145,7 @@ local leetcode = s(
 	"leetcode",
 	fmt(
 		[[
-    #include <bits/stdc++.h>
+    #include <iostream>
     using namespace std;
 
     class Solution {{
@@ -171,6 +170,35 @@ local leetcode = s(
 	)
 )
 table.insert(snippets, leetcode)
+
+local aoc = s(
+	"aoc",
+	fmt(
+		[[
+#include <fstream>
+#include <iostream>
+using namespace std;
+
+int main() {{
+    ifstream input_file("../input");
+    string line;
+    vector<string> lines;
+    while (getline(input_file, line)) {{
+        lines.push_back(line);
+    }}
+
+    {}
+
+    return 0;
+}}
+
+    ]],
+		{
+			i(0, ""),
+		}
+	)
+)
+table.insert(snippets, aoc)
 -- End Refactoring --
 
 return snippets, autosnippets

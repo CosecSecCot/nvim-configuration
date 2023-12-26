@@ -1,15 +1,3 @@
--- return {
--- 	"mcchrish/zenbones.nvim",
--- 	dependencies = {
--- 		"rktjmp/lush.nvim",
--- 	},
--- 	priority = 1000,
---     config = function()
---         -- vim.cmd.colorscheme('tokyobones')
--- ColorMyPP("tokyobones")
---     end
--- }
-
 return {
 	{
 		"neanias/everforest-nvim",
@@ -45,7 +33,7 @@ return {
 		"rebelot/kanagawa.nvim",
 		config = function()
 			require("kanagawa").setup({
-				-- transparent = true,
+				transparent = true,
 				terminal_colors = true,
 			})
 		end,
@@ -61,8 +49,78 @@ return {
 			})
 		end,
 	},
-	{ "ramojus/mellifluous.nvim" },
+	{
+		"ramojus/mellifluous.nvim",
+		config = function()
+			require("mellifluous").setup({
+				dim_inactive = true,
+				bg_contrast = "hard",
+				color_set = "mellifluous",
+				styles = { -- see :h attr-list for options. set {} for NONE, { option = true } for option
+					comments = { italic = true },
+					conditionals = { italic = true },
+					folds = {},
+					loops = {},
+					functions = {},
+					keywords = { italic = true },
+					strings = {},
+					variables = {},
+					numbers = {},
+					booleans = { italic = false, bold = true },
+					properties = {},
+					types = {},
+					operators = {},
+				},
+				transparent_background = {
+					enabled = true,
+					floating_windows = true,
+					telescope = true,
+					file_tree = true,
+					cursor_line = true,
+					status_line = false,
+				},
+				flat_background = {
+					line_numbers = false,
+					floating_windows = false,
+					file_tree = false,
+					cursor_line_number = false,
+				},
+				mellifluous = { -- name any of the defined color sets
+					color_overrides = {
+						dark = { -- dark variant of the color set
+							bg = nil, -- used for shades, on some color sets fg will be derived from this
+							fg = nil, -- used for shades if shades_fg is undefined
+							shades_fg = nil, -- used for shades (dimmed foregrounds)
+
+							main_keywords = nil,
+							other_keywords = nil,
+							types = nil,
+							operators = nil,
+							strings = nil,
+							functions = nil,
+							constants = nil,
+							comments = "#454545",
+
+							red = nil, -- errors, deletes, bad spellings
+							orange = nil, -- warnings, changes, unusual spellings
+							green = nil, -- staged, additions
+							blue = nil, -- information, new files
+							purple = nil, -- hints, merge
+
+							-- for better terminal highlights
+							yellow = nil,
+							cyan = nil,
+						},
+						light = { -- light variant of the color set
+							-- same fields as in dark variant
+						},
+					},
+				},
+			})
+		end,
+	},
 	{ "chiendo97/intellij.vim" },
+	{ "sainnhe/gruvbox-material" },
 	--  'tinted-theming/base16-vim'
 	{ "metalelf0/base16-black-metal-scheme" },
 	{ "rockerBOO/boo-colorscheme-nvim" },
@@ -139,31 +197,7 @@ return {
 	{
 		"LazyVim/LazyVim",
 		opts = {
-			colorscheme = "mellifluous",
+			colorscheme = "kanagawa",
 		},
 	},
 }
-
--- use({ "rose-pine/neovim", as = "rose-pine" })
--- use("nyoom-engineering/oxocarbon.nvim")
--- use("https://github.com/rafi/awesome-vim-colorschemes")
--- use("fcpg/vim-fahrenheit")
--- use("Lokaltog/vim-distinguished")
--- use("savq/melange-nvim")
--- use("aktersnurra/no-clown-fiesta.nvim")
--- use("adigitoleo/vim-mellow")
--- use("TheNiteCoder/mountaineer.vim")
--- use("water-sucks/darkrose.nvim")
--- -- use 'xero/miasma.nvim'
--- use("kuuote/elly.vim")
--- use("axvr/raider.vim")
--- use("dylnmc/vulpo.vim")
--- use("Lokaltog/vim-monotone")
--- use("rebelot/kanagawa.nvim")
--- use("ramojus/mellifluous.nvim")
--- use("chiendo97/intellij.vim")
--- -- use 'tinted-theming/base16-vim'
--- use("metalelf0/base16-black-metal-scheme")
--- use("rockerBOO/boo-colorscheme-nvim")
--- use("folke/tokyonight.nvim")
--- use("alessandroyorba/despacio")

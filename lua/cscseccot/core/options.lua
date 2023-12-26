@@ -25,3 +25,4 @@ vim.opt.updatetime = 50
 vim.cmd([[autocmd FileType c,cpp,cs,java setlocal commentstring=//\ %s]])
 vim.cmd([[set nohlsearch]])
 vim.cmd([[let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro']])
+vim.g.netrw_banner = false
