@@ -4,11 +4,11 @@ return {
 	config = function()
 		require("transparent").setup({
 			extra_groups = {
-				"DiagnosticSign",
-				"DiagnosticSign",
-				"DiagnosticSign",
-				"DiagnosticSign",
-				"DiagnosticSign",
+				"DiagnosticSignError",
+				"DiagnosticSignHint",
+				"DiagnosticSignInfo",
+				"DiagnosticSignOk",
+				"DiagnosticSignWarn",
 				"TelescopeBorder",
 				"NormalFloat",
 				"FloatBorder",
