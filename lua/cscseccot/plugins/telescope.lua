@@ -11,15 +11,7 @@ return {
 		local telescope = require("telescope")
 		-- local actions = require('telescope.actions')
 
-		telescope.setup({
-			-- mappings = {
-			--     i = {
-			--         ['<C-k>'] = actions.move_selection_previous(),
-			--         ['<C-j>'] = actions.move_selection_next(),
-			--         ['<C-q>'] = actions.send_selected_to_qflist() + actions.open_qflist(),
-			--     }
-			-- }
-		})
+		telescope.setup({})
 
 		telescope.load_extension("fzf")
 
