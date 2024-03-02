@@ -7,7 +7,18 @@ return {
 			})
 		end,
 	},
-	{ "rose-pine/neovim", name = "rose-pine" },
+	{
+		"rose-pine/neovim",
+		name = "rose-pine",
+		config = function()
+			require("rose-pine").setup({
+				styles = {
+					italic = false,
+					transparency = true,
+				},
+			})
+		end,
+	},
 	{
 		"mcchrish/zenbones.nvim",
 		dependencies = {
@@ -197,7 +208,7 @@ return {
 	{
 		"LazyVim/LazyVim",
 		opts = {
-			colorscheme = "kanagawa",
+			colorscheme = "rose-pine",
 		},
 	},
 }
