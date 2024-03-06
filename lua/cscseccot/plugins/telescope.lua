@@ -18,6 +18,7 @@ return {
 		-- Keymaps
 		vim.keymap.set("n", "<leader>pf", "<cmd>Telescope find_files<CR>")
 		vim.keymap.set("n", "<leader>rf", "<cmd>Telescope oldfiles<CR>")
+		vim.keymap.set("n", "<leader>gf", "<cmd>Telescope git_files<CR>")
 		vim.keymap.set("n", "<leader>pS", "<cmd>Telescope live_grep<CR>")
 		vim.keymap.set(
 			"n",
