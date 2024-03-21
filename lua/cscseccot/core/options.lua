@@ -1,6 +1,5 @@
 vim.opt.nu = true
 vim.opt.rnu = true
--- vim.opt.rnu = true
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
@@ -22,7 +21,14 @@ vim.opt.scrolloff = 8
 vim.opt.termguicolors = true
 vim.opt.updatetime = 50
 
-vim.cmd([[autocmd FileType c,cpp,cs,java setlocal commentstring=//\ %s]])
-vim.cmd([[set nohlsearch]])
-vim.cmd([[let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro']])
+vim.cmd [[autocmd FileType c,cpp,cs,java setlocal commentstring=//\ %s]]
+vim.cmd [[set nohlsearch]]
+vim.cmd [[let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro']]
 vim.g.netrw_banner = false
+
+vim.opt.laststatus = 3
+
+-- vim.opt.listchars = {
+-- 	eol = "↲",
+-- }
+-- vim.opt.list = true

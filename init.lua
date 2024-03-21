@@ -1,4 +1,4 @@
-require("cscseccot.core")
-require("cscseccot.lazy")
+require "cscseccot.core"
+require "cscseccot.lazy"
 
-print("Hello from CosecSecCot")
+print "Hello from CosecSecCot"
