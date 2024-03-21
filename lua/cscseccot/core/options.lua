@@ -27,6 +27,7 @@ vim.cmd [[let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro']]
 vim.g.netrw_banner = false
 
 vim.opt.laststatus = 3
+vim.opt.showmode = false
 
 -- vim.opt.listchars = {
 -- 	eol = "↲",
